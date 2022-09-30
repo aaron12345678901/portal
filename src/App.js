@@ -1,23 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/app.css";
+import Login from "./components/Login";
+import Register from "./components/Register";
+
+//const signupModal = document.querySelector(".signup-form-wrapper");
+//const loginModal = document.querySelector(".login-form-wrapper");
+//const signupBtn = document.querySelector(".signup-btn");
+//const loginBtn = document.querySelector(".login-btn");
+//const signupX = document.querySelector(".signup-x");
+//const loginX = document.querySelector(".login-x");
+//const formContainer = document.querySelector(".form-container");
+
+//signupBtn.addEventListener("click", () => {
+  //signupModal.classList.add("display");
+  //formContainer.classList.add("disable");
+//});
+
+//loginBtn.addEventListener("click", () => {
+  //loginModal.classList.add("display");
+  //formContainer.classList.add("disable");
+//});
+
+//signupX.addEventListener("click", () => {
+  //signupModal.classList.remove("display");
+  //formContainer.classList.remove("disable");
+//});
+
+//loginX.addEventListener("click", () => {
+  //loginModal.classList.remove("display");
+  //formContainer.classList.remove("disable");
+//});
+//
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> updated to netlifi11111
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React 
-        </a>
-      </header>
+      <div class="container">
+        <div class="banner-text">
+          <h1>WELCOME TO CLYDE CHILDRENS HOSPITAL</h1>
+          <p>LOGIN OR REGISTER TO ENTER THE HOSPITAL PORTAL</p>
+        </div>
+        <div class="btns">
+          <button class="btn login-btn">Login</button>
+          <button class="btn signup-btn">Register</button>
+        </div>
+        <div class="form-container">
+          {/*sign up*/}
+          <Login />
+          {/* login container */}
+          <Register />
+        </div>
+      </div>
     </div>
   );
 }

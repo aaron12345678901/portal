@@ -7,14 +7,15 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: darkblue;
-
-  img {
-    width: 100%;
-  }
-  a {
-    text-decoration: none;
-  }
-  ul {
-    list-style: none;
-  }
 }
+body img {
+  width: 100%;
+}
+body a {
+  text-decoration: none;
+}
+body ul {
+  list-style: none;
+}
+
+/*# sourceMappingURL=app.map */
