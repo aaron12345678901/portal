@@ -1,6 +1,10 @@
 import "./css/app.css";
-import Login from "./components/Login";
-import Register from "./components/Register";
+//import Login from "./components/Login";
+//import Register from "./components/Register";
+import Hello from "./components/Hello";
+import Goodbye from "./components/Goodbye";
+import Hello2 from "./components/Hello2";
+
 
 //const signupModal = document.querySelector(".signup-form-wrapper");
 //const loginModal = document.querySelector(".login-form-wrapper");
@@ -34,7 +38,36 @@ import Register from "./components/Register";
 function App() {
   return (
     <div className="App">
-      <div class="container">
+     <Hello>
+         <Goodbye />
+
+     </Hello>
+
+
+     <Hello2 />
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     {/* <Hello>
+      <Goodbye />
+     </Hello> */}
+
+
+
+
+
+
+      {/* <div class="container">
         <div class="banner-text">
           <h1>WELCOME TO CLYDE CHILDRENS HOSPITAL</h1>
           <p>LOGIN OR REGISTER TO ENTER THE HOSPITAL PORTAL</p>
@@ -44,12 +77,12 @@ function App() {
           <button class="btn signup-btn">Register</button>
         </div>
         <div class="form-container">
-          {/*sign up*/}
+          {sign up}
           <Login />
-          {/* login container */}
+          { login container }
           <Register />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
