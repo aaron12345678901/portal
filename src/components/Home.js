@@ -5,6 +5,7 @@ import Register from '../components/Register';
 
 const Home = () => {
     const [openLoginModal, setLoginModal] = useState(false);
+    const [openregModal, setregModal] = useState(false);
 
     return(
     <>
@@ -15,12 +16,13 @@ const Home = () => {
         </div>
         <div className="btns">
             <button className='btn login-btn' onClick={() => {setLoginModal(true);}}>login</button>
-            <button className='btn signup-btn' onClick={() =>{setLoginModal(true);}}>register</button>
+            <button className='btn signup-btn' onClick={() =>{setregModal(true);}}>register</button>
         </div>
         {/* signup container */}
         {/* register/> */}
         {/* login container */}
-        {openLoginModal && <Login/> && <Register/>}
+        {openLoginModal && <Login/>}
+        {openregModal && <Register/>}
     </div>
     </>
     );
