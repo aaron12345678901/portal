@@ -1,7 +1,9 @@
+
+
 const register = () => {
   return (
     <>
-     <div className="signup-form-wrapper modal">
+     <div className="modal">
           <div className="x-btn signup-x">
             &times;
           </div>

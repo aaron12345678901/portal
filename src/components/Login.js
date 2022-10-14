@@ -1,8 +1,9 @@
+
 const login = () => {
     return (
       <>
 
-<div className="login-form-wrapper modal">
+<div className="modal">
 <div className="x-btn login-x">
   &times;
 </div>
