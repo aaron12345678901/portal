@@ -21,8 +21,7 @@ const Home = () => {
         {/* signup container */}
         {/* register/> */}
         {/* login container */}
-        {openLoginModal && <Login/>}
-        {openregModal && <Register/>}
+        {openLoginModal && <Login close = {setLoginModal}/>}
     </div>
     </>
     );

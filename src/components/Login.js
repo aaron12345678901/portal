@@ -1,10 +1,10 @@
 
-const login = () => {
+const login = ({close}) => {
     return (
       <>
 
 <div className="modal">
-<div className="x-btn login-x">
+<div className="x-btn login-x" onClick={() => close(false)}>
   &times;
 </div>
 <div className="form-header">
