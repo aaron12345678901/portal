@@ -1,6 +1,7 @@
 import React from "react";
-import "./css/app.css";
-import Home from "./components/Home";
+import "./scss/app.css";
+//import Home from "./components/Home";
+import Home2 from "./user/pages/Home2";
 
 // import Login from "./components/Login";
 //import Register from "../components/Register";
@@ -14,7 +15,7 @@ function App() {
      
      
   
-   <Home></Home>
+   <Home2></Home2>
    
     
     

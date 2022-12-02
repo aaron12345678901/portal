@@ -1,0 +1,54 @@
+.home-head{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logo{
+    color: chocolate;
+    font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 2%;
+    margin-top: 2%;
+    color: #AEEBF2;
+    width: 20%;
+}
+
+.user-id{
+    width: 80%;
+    text-align: center;
+    color: #AEEBF2;
+    font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 5%;
+    font-weight: 600;
+}
+
+.main-content{
+
+
+margin: 40%;
+
+}
+
+.first-line-links{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+width: 100%;
+height: 100%;
+}
+
+.home-link-1{
+background-color: rgb(165, 19, 19);
+margin: 10%;
+
+}
+
+.home-link-2{
+    background-color: rgb(165, 19, 19);
+    margin: 10%;
+    }
+
+
+.home-link-3{
+        background-color: aqua;
+    }
