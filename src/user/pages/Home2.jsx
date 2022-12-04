@@ -1,8 +1,9 @@
 import React from "react";
 
+
 const Home2 = () => {
     return (
-        <div className="home-wrap">
+        <div className="container">
 <div className="home-head">
     <div className="logo">
         <h2>the</h2>
@@ -14,21 +15,41 @@ const Home2 = () => {
     </div>
 </div>
 
-<div className="main-content">
-
 <div className="first-line-links">
-   <div className="home-link-1">
-<p>1st</p>
-   </div>
-<div className="home-link-2">
-<p>2nd</p></div>
+
+    
+    <div className="card1">
+     <p>profile</p>
+    <div className="link-img1">
+        </div>
+    </div>
+    
+
+    <div className="card2">
+      <p>treatment</p>
+    <div className="link-img2">
+        </div>
+    </div>
+
+
+   
 </div>
 
+<div className="second-line-links">
 
-
+    <div className="card3">
+    <p>entertainment</p>
+        <div className="link-img3">
+            
+        </div>
+    </div>
 </div>
 
-
+<div className="logout-container">
+    <div className="logout-text">
+    <p>log out</p>
+</div>
+</div>
 
 
 </div>

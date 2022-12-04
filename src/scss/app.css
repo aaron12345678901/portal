@@ -203,6 +203,18 @@ body ul {
   color: #aaa;
 }
 
+@font-face {
+  font-family: livvic;
+  src: url(../Fonts/Livvic/Livvic-SemiBold.ttf);
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
 .home-head {
   display: flex;
   flex-direction: row;
@@ -210,12 +222,12 @@ body ul {
 }
 
 .logo {
-  color: chocolate;
   font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-left: 2%;
   margin-top: 2%;
   color: #AEEBF2;
   width: 20%;
+  font-size: 1.5rem;
 }
 
 .user-id {
@@ -225,30 +237,135 @@ body ul {
   font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-top: 5%;
   font-weight: 600;
-}
-
-.main-content {
-  margin: 40%;
+  font-size: 2.5rem;
 }
 
 .first-line-links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  margin-top: 15%;
+  height: 20%;
+  justify-content: space-around;
+}
+
+.card1 {
+  position: relative;
+  margin-left: 10%;
+  border: 2px solid white;
+  color: aqua;
+  margin-right: 10%;
+  width: 35%;
+  background-color: #46658c;
+  border-radius: 20%;
+}
+
+.card1 p {
+  position: absolute;
+  bottom: -40px;
+  width: 50%;
+  margin-left: 25%;
+  color: #AEEBF2;
+  font-family: livvic;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.link-img1 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/images2/user.png);
 }
 
-.home-link-1 {
-  background-color: rgb(165, 19, 19);
-  margin: 10%;
+.card2 {
+  position: relative;
+  border: 2px solid white;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 35%;
+  background-color: #46658c;
+  border-radius: 20%;
 }
 
-.home-link-2 {
-  background-color: rgb(165, 19, 19);
-  margin: 10%;
+.card2 p {
+  position: absolute;
+  bottom: -40px;
+  width: 50%;
+  margin-left: 25%;
+  color: #AEEBF2;
+  font-family: livvic;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
-.home-link-3 {
-  background-color: aqua;
+.link-img2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/images2/treatment.png);
+}
+
+.second-line-links {
+  display: flex;
+  margin-top: 7%;
+  height: 20%;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.card3 {
+  position: relative;
+  border: 2px solid white;
+  margin-right: 10%;
+  margin-left: 10%;
+  width: 35%;
+  background-color: #46658c;
+  border-radius: 20%;
+}
+
+.card3 p {
+  position: absolute;
+  bottom: -40px;
+  width: 50%;
+  margin-left: 25%;
+  color: #AEEBF2;
+  font-family: livvic;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.link-img3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/images2/smartphone.png);
+}
+
+.logout-container {
+  display: flex;
+  width: 100%;
+}
+
+.logout-text {
+  width: 100%;
+  text-align: center;
+  color: #AEEBF2;
+  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-top: 20%;
+  font-weight: 600;
+  font-size: 2.5rem;
 }/*# sourceMappingURL=app.css.map */
