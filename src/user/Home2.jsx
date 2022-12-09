@@ -15,41 +15,32 @@ const Home2 = () => {
     </div>
 </div>
 
-<div className="first-line-links">
-
-    
-    <div className="card1">
-     <p>profile</p>
-    <div className="link-img1">
+<div className="h-firstline-links">
+    <div className="hfirst-link">
+        <div className="hfirst-img"></div>
+        <div className="hfirst-link-text">
+            <p>profile</p>
         </div>
     </div>
     
-
-    <div className="card2">
-      <p>treatment</p>
-    <div className="link-img2">
+    <div className="hsecond-link">
+        <div className="hsecond-img"></div>
+        <div className="hsecond-link-text">
+            <p>treatment</p>
         </div>
     </div>
+    </div>  
 
+    <div className="h-third-links">
+        <div className="hthird-link">
+            <div className="hthird-img">
 
-   
-</div>
-
-<div className="second-line-links">
-
-    <div className="card3">
-    <p>entertainment</p>
-        <div className="link-img3">
-            
+            </div>
+        </div>
+        <div className="hthird-line-text">
+            <p>entertainment</p>
         </div>
     </div>
-</div>
-
-<div className="logout-container">
-    <div className="logout-text">
-    <p>log out</p>
-</div>
-</div>
 
 
 </div>

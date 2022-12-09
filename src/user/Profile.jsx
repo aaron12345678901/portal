@@ -69,11 +69,7 @@ form scabs which eventually drop off.</p>
 
 
 
-<div className="logout-container">
-    <div className="logout-text">
-    <p>log out</p>
-</div>
-</div>
+
 
 
 </div>

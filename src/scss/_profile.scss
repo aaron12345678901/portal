@@ -3,7 +3,7 @@
  .profile-container  {
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(rgba(7, 7, 7, 0.6), rgba(15, 15, 15, 0.8)), url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
+    background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
     background-size: cover;
     box-sizing: border-box;
 }
@@ -12,8 +12,11 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    
-    
+
+    h2{
+        font-weight: 300;
+        margin-bottom: -1.0rem;
+    }
     
 }
 

@@ -24,12 +24,29 @@ const Entertainment = () => {
   <div className="e-firstline-links">
     <div className="efirst-link">
         <div className="efirst-img"></div>
+        <div className="efirst-link-text">
+            <p>games</p>
+        </div>
     </div>
     
     <div className="esecond-link">
         <div className="esecond-img"></div>
+        <div className="esecond-link-text">
+            <p>movies</p>
+        </div>
     </div>
     </div>  
+
+    <div className="e-third-links">
+        <div className="ethird-link">
+            <div className="ethird-img">
+
+            </div>
+        </div>
+        <div className="ethird-line-text">
+            <p>youtube</p>
+        </div>
+    </div>
   
 </div>
 
