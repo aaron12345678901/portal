@@ -26,26 +26,29 @@ const Home2 = () => {
         </div>
     </div>
     </Link>
+     <Link to="Profile">
     <div className="hsecond-link">
         <div className="hsecond-img"></div>
         <div className="hsecond-link-text">
             <p>treatment</p>
         </div>
     </div>
+    </Link>
     </div>  
 
     <div className="h-third-links">
-    
+    <Link to="Entertainment">
         <div className="hthird-link">
             <div className="hthird-img">
          </div>
 
-        
-        </div>
-        
         <div className="hthird-line-text">
             <p>entertainment</p>
         </div>
+
+        </div>
+        </Link>
+       
         
     </div>
 

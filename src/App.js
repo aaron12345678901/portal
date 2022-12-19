@@ -16,11 +16,20 @@ function App() {
      
      <BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Home2 />}>
+				
 					<Route
-						index
+					    index
 						element={<Home2 />}
 					/>
+
+					<Route 
+					   path="/"
+					   element= {
+						<Home2/>
+					   }
+					   />
+
+                    
 					<Route
 						path="Profile"
 						element={
@@ -28,13 +37,16 @@ function App() {
 						}
 					/>
 					<Route
-						path="Entertainement"
+						path="Entertainment"
 						element={
 							<Entertainment />
 						}
 					/>
+
+                   
+				
 					
-				</Route>
+				
 			</Routes>
 		</BrowserRouter>
   
