@@ -53,7 +53,6 @@ const Home2 = () => {
     </div>
 
 
-
  <Outlet />
 </div>
 

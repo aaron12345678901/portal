@@ -1,54 +1,64 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import "./scss/app.css";
-//import Home from "./components/Home";
 import Home2 from "./user/Home2";
 import Profile from "./user/Profile";
-// import Login from "./components/Login";
-//import Register from "../components/Register";
-//import Counter from "./components/Counter";
+import Counter from "./components/Counter";
 import Entertainment from "./user/Entertainement";
+import Home from "./components/Home";
 
 
 function App() {
   return (
     <div className="App">
      
-     <BrowserRouter>
+
+
+
+      <BrowserRouter>
 			<Routes>
 				
 					<Route
 					    index
-						element={<Home2 />}
+						element={<Home />}
 					/>
 
 					<Route 
 					   path="/"
 					   element= {
-						<Home2/>
+						<Home/>
 					   }
 					   />
 
                     
-					<Route
-						path="Profile"
+                    <Route
+						path="/Home2"
 						element={
-							<Profile />
+							<Home2 />
 						}
 					/>
 					<Route
-						path="Entertainment"
+                        path="/Home2/Profile"
+                        element={<Profile />}
+                    />
+				
+
+
+					<Route
+						path="/Home2/Entertainment"
 						element={
 							<Entertainment />
 						}
 					/>
+					
+					
 
                    
 				
 					
 				
 			</Routes>
-		</BrowserRouter>
+		</BrowserRouter> 
   
     
     

@@ -1,16 +1,18 @@
 import React from "react";
-import {Outlet, Link } from 'react-router-dom';
+import {Outlet, Link,useNavigate } from 'react-router-dom';
 
 
 const Profile = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="profile-container">
-<Link to="/">
+
 <div className="profile-home-head">
    
 
  
-   <div className="back-arrow">
+   <div className="back-arrow" onClick={() => navigate(-1)}>
     <div className="img-container">
     </div>
    </div>
@@ -21,12 +23,12 @@ const Profile = () => {
     </div>
    
 </div>
-</Link>
+
 
           
        
 
-<div className="profile-card">
+<div className="profile-card" >
 
 <div className="profile-img-pat-details"> 
 
