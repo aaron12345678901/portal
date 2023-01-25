@@ -47,49 +47,39 @@ const submitForm = (e) => {
 
 
     return(
-  <div className="main-box">
+  <div className="reg_container">
 
     {/* form encloses full sections with data to be sent */}
     <form onSubmit={submitForm}>
-        <div className="row">
-        <div className="col-md-12 text-center"><h1> Register</h1></div>
+        <div className="reg_heading">
+        <h2> Register</h2>
         </div>
-    <div className="row">
-          <div className="col-md-6">First name</div>
-          <div className="col-md-6">
+    <div className="reg_text">
+          <h3>First name:</h3>
             <input type="text" name ="first_name" className="form-control"
             onChange={handleChange} value={data.first_name} />
-        </div>
     </div>
 
-    <div className="row">
-          <div className="col-md-6">Last name</div>
-          <div className="col-md-6">
+    <div className="reg_text">
+          <h3>Last name:</h3>
             <input type="text" name ="last_name" className="form-control"
             onChange={handleChange} value={data.last_name} />
-        </div>
     </div>
 
-    <div className="row">
-          <div className="col-md-6">Email</div>
-          <div className="col-md-6">
+    <div className="reg_text">
+          <h3>Email:</h3>
             <input type="email" name ="Email" className="form-control"
             onChange={handleChange} value={data.Email} />
-        </div>
     </div>
 
-    <div className="row">
-          <div className="col-md-6">Password</div>
-          <div className="col-md-6">
+    <div className="reg_text">
+          <h3>Password:</h3>
             <input type="Password" name ="Password" className="form-control"
             onChange={handleChange} value={data.Password} />
-        </div>
     </div>
 
-    <div className="row">
-          <div className="col-md-12 text-cener">
+    <div className="reg_btn">
             <input type="submit" name ="submit" value="Register" className="btn btn-success"/>
-        </div>
     </div>
 
     </form>

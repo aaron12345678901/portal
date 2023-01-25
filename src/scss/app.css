@@ -19,15 +19,58 @@ body ul {
 }
 
 .home-page {
+  background-color: rgb(11, 56, 116);
   width: 100vw;
   height: 100vh;
-  background-color: aliceblue;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
   background-size: cover;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
 }
 
+.input_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.register_wrap {
+  margin-right: 25%;
+  text-align: center;
+}
+
+.login_wrap {
+  text-align: center;
+}
+
+.logoh {
+  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-left: 45%;
+  color: #AEEBF2;
+  width: 20%;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2%;
+}
+
+@media only screen and (max-width: 600px) {
+  .input_wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .register_wrap {
+    margin-right: 0%;
+    padding-bottom: 2rem;
+  }
+  .logoh {
+    margin-left: 10%;
+  }
+}
 @font-face {
   font-family: livvic;
   src: url(../Fonts/Livvic/Livvic-SemiBold.ttf);
@@ -468,4 +511,41 @@ body ul {
     height: 9rem;
     margin-top: 2.7rem;
   }
+}
+.Login_heading {
+  color: #AEEBF2;
+  margin-bottom: 0.8rem;
+  text-decoration: underline;
+}
+
+.Login_text {
+  color: #AEEBF2;
+}
+
+.Login_btn {
+  position: relative;
+  left: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+input.btn.btn-success {
+  color: #AEEBF2;
+  background-color: #46658c;
+  border: 1px solid #AEEBF2;
+}
+
+.reg_heading {
+  color: #AEEBF2;
+  margin-bottom: 0.8rem;
+  text-decoration: underline;
+}
+
+.reg_text {
+  color: #AEEBF2;
+}
+
+.reg_btn {
+  position: relative;
+  left: 0.8rem;
+  margin-top: 1.5rem;
 }/*# sourceMappingURL=app.css.map */
