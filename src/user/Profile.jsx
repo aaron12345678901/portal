@@ -5,13 +5,16 @@ import axios from 'axios';
 const Profile = () => {
     const navigate = useNavigate();
     const [userData, setUserData] = useState([]);
-
+    const[loading, setloading]=useState(false)
+    
+    
     useEffect(() => {
         axios.get('http://localhost/php-react/register-login-php/get.php')
-          .then(response => setUserData([response.data]))
+          .then(response => setUserData(response.data))
           .catch(error => console.error(error));
+          setloading(true)
       }, []);
-
+      console.log(userData);
       return (
         <div className="profile-container">
           <div className="profile-home-head">
@@ -30,13 +33,15 @@ const Profile = () => {
                 <div className="profile-img"></div>
               </div>
               <div className="profile-name-patnumber">
-                {userData.map((data, index) => (
+
+                {loading?userData.map((data, index) => (
                   <>
                     <p>name:{data.first_name}</p>
                     <p>surname:{data.last_name}</p>
                     <p>patient num:{data.patientnum}</p>
                   </>
-                ))}
+                )):null}
+
               </div>
             </div>
       
