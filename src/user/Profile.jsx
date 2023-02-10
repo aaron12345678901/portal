@@ -30,6 +30,10 @@ const Profile = () => {
           <h2>the</h2>
           <h1>portal</h1>
         </div>
+        
+       
+
+
       </div>
 
       <div className="profile-card">

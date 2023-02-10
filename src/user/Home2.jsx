@@ -1,6 +1,6 @@
 import React from "react";
 import {Outlet, Link } from 'react-router-dom';
-
+import Logout from '../components/Logout';
 
 const Home2 = () => {
     return (
@@ -11,8 +11,14 @@ const Home2 = () => {
         <h1>portal</h1>
     </div>
     <div className="user-id">
+     
         <p>Welcome:place holder</p>
         
+    </div>
+
+    <div className="logout-btns">
+        
+        <Logout></Logout>
     </div>
 </div>
 
