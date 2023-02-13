@@ -1,69 +1,82 @@
-import React from "react";
-import {Outlet, Link } from 'react-router-dom';
-import Logout from '../components/Logout';
+import React, { useState, useEffect } from "react";
+import { Outlet, Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import Logout from "../components/Logout";
 
 const Home2 = () => {
-    return (
-        <div className="container">
-<div className="home-head">
-    <div className="logo">
-        <h2>the</h2>
-        <h1>portal</h1>
-    </div>
-    <div className="user-id">
-     
-        <p>Welcome:place holder</p>
-        
-    </div>
+  const navigate = useNavigate();
+  const [userData, setUserData] = useState([]);
+  const [loading, setloading] = useState(false);
+  console.log(userData);
 
-    <div className="logout-btns">
-        
-        <Logout></Logout>
-    </div>
-</div>
+  let id = JSON.parse(window.localStorage.getItem("id"));
+  console.log("test", id);
 
-<div className="h-firstline-links">
+  useEffect(() => {
+    axios
+      .post(`http://localhost/php-react/register-login-php/get.php?id=${id}`)
 
-<Link to="Profile">
-    <div className="hfirst-link">
-        <div className="hfirst-img"></div>
-        <div className="hfirst-link-text">
-            <p>profile</p>
+      .then((response) => setUserData(response.data))
+      .catch((error) => console.error(error));
+    setloading(true);
+  }, []);
+
+  return (
+    <div className="container">
+      <div className="home-head">
+        <div className="logo">
+          <h2>the</h2>
+          <h1>portal</h1>
         </div>
-    </div>
-    </Link>
-     <Link to="Profile">
-    <div className="hsecond-link">
-        <div className="hsecond-img"></div>
-        <div className="hsecond-link-text">
-            <p>treatment</p>
-        </div>
-    </div>
-    </Link>
-    </div>  
-
-    <div className="h-third-links">
-    <Link to="Entertainment">
-        <div className="hthird-link">
-            <div className="hthird-img">
-         </div>
-
-        <div className="hthird-line-text">
-            <p>entertainment</p>
+        <div className="user-id">
+          {loading
+            ? userData.map((data) => (
+                <p>
+                  Welcome: {data.first_name} {data.last_name}
+                </p>
+              ))
+            : null}
         </div>
 
+        <div className="logout-btns">
+          <Logout></Logout>
         </div>
+      </div>
+
+      <div className="h-firstline-links">
+        <Link to="Profile">
+          <div className="hfirst-link">
+            <div className="hfirst-img"></div>
+            <div className="hfirst-link-text">
+              <p>profile</p>
+            </div>
+          </div>
         </Link>
-       
-        
+        <Link to="Profile">
+          <div className="hsecond-link">
+            <div className="hsecond-img"></div>
+            <div className="hsecond-link-text">
+              <p>treatment</p>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <div className="h-third-links">
+        <Link to="Entertainment">
+          <div className="hthird-link">
+            <div className="hthird-img"></div>
+
+            <div className="hthird-line-text">
+              <p>entertainment</p>
+            </div>
+          </div>
+        </Link>
+      </div>
+
+      <Outlet />
     </div>
+  );
+};
 
-
- <Outlet />
-</div>
-
- 
-    )
-}
-
-export default Home2
+export default Home2;

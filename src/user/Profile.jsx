@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Logout from "../components/Logout";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -26,14 +27,15 @@ const Profile = () => {
         <div className="back-arrow" onClick={() => navigate(-1)}>
           <div className="img-container"></div>
         </div>
+
         <div className="profile-logo">
           <h2>the</h2>
           <h1>portal</h1>
         </div>
-        
-       
 
-
+        <div className="logout-btnsP">
+          <Logout></Logout>
+        </div>
       </div>
 
       <div className="profile-card">
@@ -80,13 +82,11 @@ const Profile = () => {
           {loading
             ? userData.map((data) => (
                 <>
-                  <p>
-                    Doctor in charge of treatment :  {data.doctor}{" "}
-                  </p>
+                  <p>Doctor in charge of treatment : {data.doctor} </p>
                 </>
               ))
             : null}
-<br />
+          <br />
           {loading
             ? userData.map((data) => (
                 <>
@@ -108,7 +108,13 @@ const Profile = () => {
         </div>
       </div>
 
-      <Outlet />
+
+       <div className="profile-links">
+       <Link to="Map">
+      <div className="maplink"><p>click here to see the hospital layout</p></div>
+      </Link>
+      </div>
+   
     </div>
   );
 };

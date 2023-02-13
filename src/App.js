@@ -6,6 +6,7 @@ import Profile from "./user/Profile";
 import Counter from "./components/Counter";
 import Entertainment from "./user/Entertainement";
 import Home from "./components/Home";
+import Map from "./user/Map";
 
 
 function App() {
@@ -40,6 +41,11 @@ function App() {
 					<Route
                         path="/Home2/Profile"
                         element={<Profile />}
+                    />
+
+                    <Route
+                        path="/Home2/Profile/Map"
+                        element={<Map/>}
                     />
 				
 

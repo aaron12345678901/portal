@@ -265,16 +265,11 @@ body ul {
 .profile-home-head {
   display: flex;
   flex-direction: row;
-  width: 100%;
-}
-.profile-home-head h2 {
-  font-weight: 300;
-  margin-bottom: -1rem;
+  justify-content: space-evenly;
 }
 
 .profile-logo {
   position: relative;
-  left: 20%;
   font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   margin-left: 2%;
   margin-top: 2%;
@@ -285,7 +280,6 @@ body ul {
 
 .back-arrow {
   position: relative;
-  left: 2px;
   top: 2px;
   width: 20%;
 }
@@ -300,6 +294,10 @@ body ul {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/images2/share.png);
+}
+
+.logout-btnsP {
+  margin-top: 3rem;
 }
 
 .profile-card {
@@ -369,12 +367,57 @@ body ul {
   font-family: livvic;
 }
 
+.profile-links {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.maplink {
+  color: #AEEBF2;
+  width: 100%;
+  position: relative;
+  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin-bottom: 9rem;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .maplink {
+    margin-bottom: 6rem;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .maplink {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .maplink {
+    margin-bottom: 1rem;
+  }
+}
 .entertainment-container {
   width: 100vw;
   height: 100vh;
   background-size: cover;
   box-sizing: border-box;
   background-image: url(../images/images2/backgrounds/wave-haikei.png);
+}
+
+.entertainment-home-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.back-arrow {
+  position: relative;
+  top: 2px;
+  width: 20%;
 }
 
 .profile-logo p {
@@ -390,8 +433,8 @@ body ul {
 .e-firstline-links {
   display: flex;
   flex-direction: row;
-  margin-top: 0.1rem;
-  height: 15rem;
+  margin-top: 5rem;
+  height: 20rem;
   justify-content: space-around;
 }
 
@@ -453,12 +496,14 @@ body ul {
 }
 
 .ethird-link {
+  position: relative;
   border: 2px solid white;
-  color: aqua;
-  display: flex;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 0.3rem;
   min-width: 14rem;
   max-width: 14rem;
-  height: 100%;
+  height: 10rem;
   background-color: #46658c;
   border-radius: 20%;
 }
@@ -514,7 +559,7 @@ body ul {
   }
   .e-third-links {
     height: 9rem;
-    margin-top: 2.7rem;
+    margin-top: 4.7rem;
   }
 }
 .Login_heading {
@@ -575,4 +620,13 @@ input.btn.btn-success {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/images2/log-out.png);
+}
+
+.map-page-container {
+  background-color: rgb(11, 56, 116);
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
 }/*# sourceMappingURL=app.css.map */

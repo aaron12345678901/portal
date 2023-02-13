@@ -11,18 +11,14 @@
 .profile-home-head{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    justify-content: space-evenly;
 
-    h2{
-        font-weight: 300;
-        margin-bottom: -1.0rem;
-    }
+
     
 }
 
 .profile-logo{
     position: relative;
-    left: 20%;
     font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-left: 2%;
     margin-top: 2%;
@@ -35,11 +31,11 @@ font-size: 1.5rem;
 .back-arrow{
   
     position: relative;
-    left: 2px;
+    
     top: 2px;
     width: 20%;
    
-}
+ }
 
 .img-container{
     display: block;
@@ -51,6 +47,10 @@ font-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url(../images/images2/share.png);
+}
+
+.logout-btnsP{
+    margin-top: 3rem;
 }
 
 // main body
@@ -126,3 +126,49 @@ font-family: livvic;
 }
 
 
+.profile-links{
+    position: absolute;
+    bottom: 0;
+   
+    width: 100%;
+}
+
+
+.maplink{
+    color: #AEEBF2;
+    width: 100%;
+    position: relative;
+    font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-bottom: 9rem;
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .maplink{
+        margin-bottom: 6rem;
+    }
+
+  }
+
+
+@media only screen and (max-width: 470px) {
+    .maplink{
+        margin-bottom: 3rem;
+       
+    }
+
+
+}
+
+@media only screen and (max-width: 360px) {
+    .maplink{
+        margin-bottom: 1rem;
+       
+    }
+
+
+}
