@@ -623,10 +623,42 @@ input.btn.btn-success {
 }
 
 .map-page-container {
-  background-color: rgb(11, 56, 116);
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
+  background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
   background-size: cover;
   box-sizing: border-box;
+}
+
+.map-card {
+  width: 75vw;
+  background-color: #021140;
+  border: 1px solid #AEEBF2;
+  position: relative;
+  left: 10%;
+  top: 10%;
+  height: 70%;
+}
+
+.map-img-container {
+  margin-left: 10%;
+  color: aqua;
+  margin-right: 10%;
+  margin-top: 5%;
+  width: 80%;
+  height: 80%;
+  background-color: #021140;
+  border-radius: 20%;
+}
+
+.map-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../images/images2/map.png);
 }/*# sourceMappingURL=app.css.map */

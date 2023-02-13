@@ -25,7 +25,13 @@ if (!$conn) {
 
 
 // Retrieve data from the database based on the user's ID
-$sql = "SELECT * FROM register WHERE id = '$user_id'";
+$sql = "SELECT register.first_name,register.last_name,register.patientnum,register.Appointments,doctor.doctor,visit.ward,visit.ailment,visit.treatment
+FROM visit
+INNER JOIN register
+ON visit.fk_register_id = register.id
+INNER JOIN doctor
+ON visit.fk_doctor_id = doctor.id
+WHERE visit.id = '$user_id'";
 $result = $conn->query($sql);
 
 // Check if there are any results

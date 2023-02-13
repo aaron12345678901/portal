@@ -3,13 +3,11 @@ import Logout from "../components/Logout";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 
 const Map = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
- <div className="map-page-container">
-
-
-  <div className="profile-home-head">
+    <div className="map-page-container">
+      <div className="profile-home-head">
         <div className="back-arrow" onClick={() => navigate(-1)}>
           <div className="img-container"></div>
         </div>
@@ -24,11 +22,13 @@ const Map = () => {
         </div>
       </div>
 
-
- </div>
-  
+      <div className="map-card">
+        <div className="map-img-container">
+            <div className="map-img"></div>
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Map;
-
