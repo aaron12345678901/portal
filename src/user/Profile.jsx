@@ -108,13 +108,13 @@ const Profile = () => {
         </div>
       </div>
 
-
-       <div className="profile-links">
-       <Link to="Map">
-      <div className="maplink"><p>click here to see the hospital layout</p></div>
-      </Link>
+      <div className="profile-links">
+        <Link to="Map">
+          <div className="maplink">
+            <p>click here to see the hospital layout</p>
+          </div>
+        </Link>
       </div>
-   
     </div>
   );
 };

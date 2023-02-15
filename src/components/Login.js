@@ -17,13 +17,20 @@ const Login = () => {
 
     axios.get(url)
       .then((result) => {
-        if (result.data.Status === '200') {
+        if (result.data.Status === '200' && result.data.isadmin == 0) {
           window.localStorage.setItem('email', result.data.email);
           window.localStorage.setItem('userName', (result.data.first_name + ' ' + result.data.first_name ));
           window.localStorage.setItem('id', result.data.id);
           navigate(`/Home2`);
           console.log(result);
-        } else {
+        } 
+
+        else if(result.data.Status === '200' && result.data.isadmin == 1){
+          navigate(`/Admindash`);
+          console.log("admin");
+        }
+        
+        else {
           alert('Invalid User');
           console.log(result);
         }

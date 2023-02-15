@@ -1,0 +1,57 @@
+   
+ .admin-container  {
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+   
+}
+
+.admin-home-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+.admin-logo{
+    position: relative;
+    font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 2%;
+    margin-top: 2%;
+    color: #AEEBF2;
+    width: 20%;
+font-size: 1.5rem;
+}
+
+.logout-btnsA{
+    margin-top: 3rem;
+}
+
+.admin-card{
+    width: 75vw;
+    background-color: #021140;
+    border: 1px solid #AEEBF2;
+    position: relative;
+    left: 10%;
+    top: 10%;
+    }
+
+.patient{
+    text-align: left;
+    margin-left: 2rem;
+    color: #AEEBF2;
+    font-family: livvic;
+
+}    
+
+
+.admin-card-title{
+    font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 2%;
+    margin-top: 2%;
+    color: #AEEBF2;
+    width: 20%;
+font-size: 1.5rem;
+}
