@@ -1,0 +1,30 @@
+.details-body{
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.patient_record_container{
+    color: aqua;
+}
+
+.form_first{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.form_second{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+.admin-btns{
+    justify-content: space-evenly;
+
+}
