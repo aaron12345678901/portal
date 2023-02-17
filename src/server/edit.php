@@ -41,7 +41,7 @@ last_name='$lastname',
 patientnum='$patientnumber',
 Appointments=' $Appointmentsdue'
 WHERE id='$user_id'; ";
-
+$result = $conn->query($sql); 
 
 $sql = "UPDATE visit 
 INNER JOIN register
@@ -51,7 +51,7 @@ treatment ='$treatment',
 ailment=' $ailment',
 ward=' $WARD'
 WHERE register.id = '$user_id'";
-   
+$result = $conn->query($sql);   
 
 
 // Check if there are any results
