@@ -205,8 +205,10 @@ function Details() {
                     ))
                   : null}
                 <div className="admin-btns">
-                  <button onClick={edit}>submit</button>
-                  <button>make inactive</button>
+                  <button onClick={edit}>submit edits</button>
+                  </div>
+                  <div className="admin-btns">
+                  <button>delete patient</button>
                 </div>
               </div>
             </form>

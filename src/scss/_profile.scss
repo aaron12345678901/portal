@@ -164,6 +164,16 @@ font-family: livvic;
 
 }
 
+@media only screen and (max-width: 407px) {
+    .profile-img-pat-details{
+        display: flex;
+        flex-direction: column;
+      
+     }
+
+
+}
+
 @media only screen and (max-width: 360px) {
     .maplink{
         margin-bottom: 1rem;
@@ -172,3 +182,12 @@ font-family: livvic;
 
 
 }
+
+
+
+.profile-img-pat-details{
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+ }
