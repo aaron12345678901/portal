@@ -11,7 +11,7 @@ function Details() {
 
   useEffect(() => {
     axios
-      .post(`http://localhost:8040/php-react/register-login-php/get.php?id=${id}`)
+      .post(`http://localhost/php-react/register-login-php/get.php?id=${id}`)
 
       .then((response) => setUserData(response.data))
       .catch((error) => console.error(error));
@@ -43,7 +43,7 @@ function Details() {
 
  
     axios
-    .post(`http://localhost:8040/php-react/register-login-php/edit.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}&ailment=${ailment}&treatment=${treatment}&Doctor=${Doctor}&WARD=${WARD}&Appointmentsdue=${Appointmentsdue}`)
+    .post(`http://localhost/php-react/register-login-php/edit.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}&ailment=${ailment}&treatment=${treatment}&Doctor=${Doctor}&WARD=${WARD}&Appointmentsdue=${Appointmentsdue}`)
 
     .then((response) => setUserData(response.data))
     .catch((error) => console.error(error));

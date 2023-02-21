@@ -10,7 +10,7 @@ function Adminnames() {
   // Use the useEffect hook to make a GET request to the PHP script when the component mounts
   useEffect(() => {
     // Make a GET request to the PHP script
-    axios.get('http://localhost:8040/php-react/register-login-php/adminget.php')
+    axios.get('http://localhost/php-react/register-login-php/adminget.php')
       .then(response => {
         // Set the response data in state
         setData(response.data);

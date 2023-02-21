@@ -28,7 +28,7 @@ const submitForm = (e) => {
   params.append('email', data.Email);
   params.append('password', data.Password);
 
-  axios.get('http://localhost:8040/php-react/register-login-php/insert.php', { params })
+  axios.get('http://localhost/php-react/register-login-php/insert.php', { params })
     .then((result) => {
       if (result.data.status == 'invalid') {
         alert('invalid user');
