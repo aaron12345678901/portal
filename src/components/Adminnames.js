@@ -10,7 +10,7 @@ function Adminnames() {
   // Use the useEffect hook to make a GET request to the PHP script when the component mounts
   useEffect(() => {
     // Make a GET request to the PHP script
-    axios.get('http://localhost/php-react/register-login-php/adminget.php')
+    axios.get('http://localhost:8040/php-react/register-login-php/adminget.php')
       .then(response => {
         // Set the response data in state
         setData(response.data);
@@ -27,7 +27,9 @@ function Adminnames() {
       {data ? (
         <ul>
           {data.map(item => (
-            <li key={item.id}>
+            <li key={item.id}
+            id="list_names"
+            >
               <Link to={`/Details/${item.id}`}>{item.first_name} {item.last_name}</Link>
             </li>
           ))}

@@ -7,7 +7,7 @@ const Entertainment = () => {
 
   return (
     <div className="entertainment-container">
-      <div className="entertainment-home-head">
+      <div className="profile-home-head">
 
     
       <div className="back-arrow" onClick={() => navigate(-1)}>

@@ -9,8 +9,11 @@ const Admindash = () => {
     <div className="admin-container">
       <div className="admin-home-head">
         <div className="admin-logo">
-          <h2>Admin</h2>
-          <h1>panel</h1>
+          <h2>Admin Panel</h2>
+         
+          
+          
+       
         </div>
         <div className="logout-btnsA">
           <Logout></Logout>

@@ -13,7 +13,7 @@ const Login = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    const url = `http://localhost/php-react/register-login-php/login.php?email=${user.email}&password=${user.password}`;
+    const url = `http://localhost:8040/php-react/register-login-php/login.php?email=${user.email}&password=${user.password}`;
 
     axios.get(url)
       .then((result) => {

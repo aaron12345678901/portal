@@ -1,38 +1,53 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: darkblue;
 }
+
 body img {
   width: 100%;
 }
+
 body a {
   text-decoration: none;
 }
+
 body ul {
   list-style: none;
 }
 
 .home-page {
-  background-color: rgb(11, 56, 116);
+  background-color: #0b3874;
   width: 100vw;
   height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .input_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 10%;
 }
 
@@ -46,22 +61,36 @@ body ul {
 }
 
 .logoh {
-  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 45%;
   color: #AEEBF2;
   width: 20%;
   font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-top: 2%;
 }
 
 @media only screen and (max-width: 600px) {
   .input_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .register_wrap {
     margin-right: 0%;
@@ -71,54 +100,70 @@ body ul {
     margin-left: 10%;
   }
 }
+
 @font-face {
   font-family: livvic;
   src: url(../Fonts/Livvic/Livvic-SemiBold.ttf);
 }
+
 .container {
   width: 100vw;
   height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url(../images/images2/backgrounds/layered-steps-haikei.png) center no-repeat;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .home-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   margin-bottom: 4rem;
 }
 
 .logo {
-  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 2%;
   margin-top: 2%;
   color: #AEEBF2;
   width: 20%;
   font-size: 1.5rem;
 }
+
 .logo h2 {
   font-weight: 300;
-  margin-bottom: -1rem;
+  margin-bottom: -1.0rem;
 }
 
 .user-id {
   width: 80%;
   text-align: center;
   color: #AEEBF2;
-  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-top: 5%;
   font-weight: 600;
   font-size: 2.5rem;
 }
 
 .h-firstline-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 0.1rem;
   height: 15rem;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .hfirst-link {
@@ -170,10 +215,17 @@ body ul {
 }
 
 .h-third-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 12rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hthird-link {
@@ -204,6 +256,7 @@ body ul {
   color: #AEEBF2;
   text-align: center;
 }
+
 .hfirst-link-text p {
   font-family: livvic;
   font-size: 2rem;
@@ -213,6 +266,7 @@ body ul {
   color: #AEEBF2;
   text-align: center;
 }
+
 .hsecond-link-text p {
   font-family: livvic;
   font-size: 2rem;
@@ -222,6 +276,7 @@ body ul {
   color: #AEEBF2;
   text-align: center;
 }
+
 .hthird-line-text p {
   font-family: livvic;
   font-size: 2rem;
@@ -229,10 +284,19 @@ body ul {
 
 @media only screen and (max-width: 600px) {
   .h-firstline-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .hfirst-link {
     margin-bottom: 2.4rem;
@@ -242,13 +306,22 @@ body ul {
     margin-top: 2.7rem;
   }
 }
+
 @media only screen and (max-width: 740px) {
   .home-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
+
 .logout-btns {
   margin-top: 1rem;
   margin-right: 1rem;
@@ -259,18 +332,26 @@ body ul {
   height: 100vh;
   background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .profile-home-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .profile-logo {
   position: relative;
-  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 2%;
   margin-top: 2%;
   color: #AEEBF2;
@@ -310,8 +391,13 @@ body ul {
 }
 
 .profile-img-pat-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -377,7 +463,7 @@ body ul {
   color: #AEEBF2;
   width: 100%;
   position: relative;
-  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bolder;
@@ -390,25 +476,39 @@ body ul {
     margin-bottom: 6rem;
   }
 }
+
 @media only screen and (max-width: 470px) {
   .maplink {
     margin-bottom: 3rem;
   }
 }
+
 @media only screen and (max-width: 407px) {
   .profile-img-pat-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 @media only screen and (max-width: 360px) {
   .maplink {
     margin-bottom: 1rem;
   }
 }
+
 .profile-img-pat-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -417,14 +517,22 @@ body ul {
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: url(../images/images2/backgrounds/wave-haikei.png);
 }
 
 .entertainment-home-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .back-arrow {
@@ -438,17 +546,24 @@ body ul {
   font-size: 2rem;
   font-weight: 500;
 }
+
 .profile-logo p h2 {
   font-weight: 300;
-  margin-bottom: -1rem;
+  margin-bottom: -1.0rem;
 }
 
 .e-firstline-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 5rem;
   height: 20rem;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .efirst-link {
@@ -501,11 +616,18 @@ body ul {
 }
 
 .e-third-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 0rem;
   height: 12rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .ethird-link {
@@ -537,6 +659,7 @@ body ul {
   color: #AEEBF2;
   text-align: center;
 }
+
 .efirst-link-text p {
   font-family: livvic;
   font-size: 2rem;
@@ -546,6 +669,7 @@ body ul {
   color: #AEEBF2;
   text-align: center;
 }
+
 .esecond-link-text p {
   font-family: livvic;
   font-size: 2rem;
@@ -555,6 +679,7 @@ body ul {
   color: #AEEBF2;
   text-align: center;
 }
+
 .ethird-line-text p {
   font-family: livvic;
   font-size: 2rem;
@@ -562,10 +687,19 @@ body ul {
 
 @media only screen and (max-width: 600px) {
   .e-firstline-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .efirst-link {
     margin-bottom: 2.4rem;
@@ -575,6 +709,7 @@ body ul {
     margin-top: 4.7rem;
   }
 }
+
 .Login_heading {
   color: #AEEBF2;
   margin-bottom: 0.8rem;
@@ -640,7 +775,8 @@ input.btn.btn-success {
   height: 100vh;
   background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .map-card {
@@ -681,18 +817,26 @@ input.btn.btn-success {
   height: 100vh;
   background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .admin-home-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .admin-logo {
   position: relative;
-  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 2%;
   margin-top: 2%;
   color: #AEEBF2;
@@ -721,7 +865,7 @@ input.btn.btn-success {
 }
 
 .admin-card-title {
-  font-family: leuge "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: leuge 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-left: 2%;
   margin-top: 2%;
   color: #AEEBF2;
@@ -729,12 +873,46 @@ input.btn.btn-success {
   font-size: 1.5rem;
 }
 
+#list_names a {
+  color: #AEEBF2;
+  padding-top: 1rem;
+}
+
+#list_names a:link {
+  text-decoration: none;
+  color: #AEEBF2;
+  padding-top: 1rem;
+}
+
+#list_names a:visited {
+  text-decoration: none;
+  color: #AEEBF2;
+  padding-top: 1rem;
+}
+
+#list_names a:hover {
+  text-decoration: underline;
+  color: #AEEBF2;
+  font-size: x-large;
+}
+
+@media only screen and (max-width: 408px) {
+  .admin-home-head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 25%;
+  }
+}
+
 .details-body {
   width: 100vw;
   height: 100vh;
   background: url(../images/images2/backgrounds/blurry-gradient-haikei.png) center no-repeat;
   background-size: cover;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .patient_record_container {
@@ -742,27 +920,45 @@ input.btn.btn-success {
 }
 
 .form_first {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 1rem;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .form_second {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1rem;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .admin-btns {
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding-top: 1rem;
   text-align: center;
 }
 
 .admin-btns button {
-  box-shadow: 0px 1px 0px 0px #1c1b18;
+  -webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
+          box-shadow: 0px 1px 0px 0px #1c1b18;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #eae0c2), to(#ccc2a6));
   background: linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
   background-color: #eae0c2;
   border-radius: 15px;
@@ -778,9 +974,42 @@ input.btn.btn-success {
   text-shadow: 0px 1px 0px #ffffff;
 }
 
+#ailment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 @media only screen and (max-width: 1109px) {
   .form_first {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-}/*# sourceMappingURL=app.css.map */
+}
+
+@media only screen and (max-width: 507px) {
+  .profile-home-head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding-left: 25%;
+  }
+  .back-arrow {
+    height: 5rem;
+    top: 2px;
+    width: 20%;
+  }
+}
+/*# sourceMappingURL=app.css.map */

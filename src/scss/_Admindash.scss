@@ -55,3 +55,37 @@ font-size: 1.5rem;
     width: 20%;
 font-size: 1.5rem;
 }
+
+#list_names a{
+    color:#AEEBF2;
+    padding-top: 1rem;
+}
+
+#list_names a:link {
+    text-decoration: none;
+    color:#AEEBF2;
+    padding-top: 1rem;
+  }
+  
+  #list_names a:visited {
+    text-decoration: none;
+    color:#AEEBF2;
+    padding-top: 1rem;
+  }
+  
+  #list_names a:hover {
+    text-decoration: underline;
+    color:#AEEBF2;
+    font-size: x-large;
+    
+  }
+
+  @media only screen and (max-width: 408px) {
+    .admin-home-head{
+        flex-direction: column;
+        padding-left: 25%;
+    }
+
+ 
+
+}
