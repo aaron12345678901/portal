@@ -14,7 +14,7 @@ const Home2 = () => {
 
   useEffect(() => {
     axios
-      .post(`http://localhost:8040/php-react/register-login-php/get.php?id=${id}`)
+      .post(`http://localhost/php-react/register-login-php/get.php?id=${id}`)
 
       .then((response) => setUserData(response.data))
       .catch((error) => console.error(error));

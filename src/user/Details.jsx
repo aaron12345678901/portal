@@ -62,7 +62,7 @@ function Details() {
     const patientnumber = document.getElementById("patientnumber").value;
  
     axios
-    .post(`http://localhost:8040/php-react/register-login-php/remove.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}`)
+    .post(`http://localhost/php-react/register-login-php/remove.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}`)
 
     .then((response) => setUserData(response.data))
     .catch((error) => console.error(error));

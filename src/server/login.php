@@ -31,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
   $last_name = $row['last_name'];
   $id = $row['id'];
   $isadmin = $row['isadmin'];
-
+  
   // Return success response
   $response = array(
     "Status" => "200",
@@ -40,6 +40,7 @@ if (mysqli_num_rows($result) > 0) {
     "last_name" => $last_name,
     "id" => $id,
     "isadmin" => $isadmin
+    
   );
 } else {
   // Return error response
