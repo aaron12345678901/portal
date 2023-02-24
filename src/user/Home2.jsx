@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Logout from "../components/Logout";
+import Treatmentvid from "../components/Treatmentvid";
 
 const Home2 = () => {
   const navigate = useNavigate();
@@ -66,6 +67,12 @@ const Home2 = () => {
         <Link to="Entertainment">
           <div className="hthird-link">
             <div className="hthird-img"></div>
+
+
+{/* //////////////////////////////// */}
+<Treatmentvid vid='rufQmH3u2U0'/>
+{/* ///////////////////////////// */}
+
 
             <div className="hthird-line-text">
               <p>entertainment</p>
