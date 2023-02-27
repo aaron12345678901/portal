@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Map from "./user/Map";
 import Admindash from "./user/Admindash";
 import Details from "./user/Details";
+import Treatment from "./user/Treatment";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Admindash" element={<Admindash />} />
 		      <Route path="/Details/:id" element={<Details/>} />
           <Route path="/Home2" element={<Home2 />} />
+          <Route path="/Home2/Treatment" element={<Treatment />} />
           <Route path="/Home2/Profile" element={<Profile />} />
           <Route path="/Home2/Profile/Map" element={<Map />} />
           <Route path="/Home2/Entertainment" element={<Entertainment />} />

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2023 at 10:56 PM
+-- Generation Time: Feb 27, 2023 at 10:14 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -63,11 +63,32 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`id`, `first_name`, `last_name`, `email`, `password`, `patientnum`, `Appointments`, `isadmin`) VALUES
-(1, 'bob222', 'bobobobdcdc', 'a@a', '1234', '98763e33e223', '  testtesttest2332323', 0),
+(1, 'bob', 'mcdade ', 'a@a', '1234', '9834452', '  23/12/34', 0),
 (2, 'aaron', 'mcavoy', 'b@b', '1', '985676', 'Check up :25/09/2022 14.00pm ', 0),
 (3, 'admin', 'admin', 'admin@admin', 'admin', 'admin', 'admin', 1),
 (4, 'tim', 'timmy', 't@t', '1', '123445', '12/34/56/', 0),
 (5, 'wer', 'wdd', 'e@e', '1', '12345', '23/45/67/', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vid`
+--
+
+CREATE TABLE `vid` (
+  `id` int(11) NOT NULL,
+  `vidname` varchar(50) NOT NULL,
+  `vidcode` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `vid`
+--
+
+INSERT INTO `vid` (`id`, `vidname`, `vidcode`) VALUES
+(1, 'mri', 'nFkBhUYynUw'),
+(2, 'bonefracture', 'kTa_Pj8-DfA'),
+(3, 'footwarts', 'D0tbq5IP0gA');
 
 -- --------------------------------------------------------
 
@@ -82,18 +103,19 @@ CREATE TABLE `visit` (
   `ward` varchar(250) NOT NULL,
   `date` date NOT NULL,
   `fk_register_id` int(11) NOT NULL,
-  `fk_doctor_id` int(11) NOT NULL
+  `fk_doctor_id` int(11) NOT NULL,
+  `fk_vid_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `visit`
 --
 
-INSERT INTO `visit` (`id`, `ailment`, `treatment`, `ward`, `date`, `fk_register_id`, `fk_doctor_id`) VALUES
-(1, '  te', 'tes', '  12af', '2023-02-15', 1, 2),
-(2, 'a rash of red, itchy spots that turn into fluid-filled blisters They then crust over to form scabs which eventually drop off.', 'soda cream', '13b', '2023-02-01', 2, 1),
-(3, 'sore finger ', 'methadone ', '22h', '2023-02-25', 4, 1),
-(4, 'Birney nipple ', 'soda cream ', '1a', '2023-02-20', 5, 2);
+INSERT INTO `visit` (`id`, `ailment`, `treatment`, `ward`, `date`, `fk_register_id`, `fk_doctor_id`, `fk_vid_id`) VALUES
+(1, '  broken arm', 'amputate ', '  12af', '2023-02-15', 1, 2, 1),
+(2, 'a rash of red, itchy spots that turn into fluid-filled blisters They then crust over to form scabs which eventually drop off.', 'soda cream', '13b', '2023-02-01', 2, 1, 1),
+(3, 'sore finger ', 'methadone ', '22h', '2023-02-25', 4, 1, 3),
+(4, 'Birney nipple ', 'soda cream ', '1a', '2023-02-20', 5, 2, 2);
 
 --
 -- Indexes for dumped tables
@@ -112,12 +134,19 @@ ALTER TABLE `register`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `vid`
+--
+ALTER TABLE `vid`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `visit`
 --
 ALTER TABLE `visit`
   ADD PRIMARY KEY (`id`),
   ADD KEY `visitforgenkeytoregister` (`fk_register_id`),
-  ADD KEY `visitforgenkeytodoctor` (`fk_doctor_id`);
+  ADD KEY `visitforgenkeytodoctor` (`fk_doctor_id`),
+  ADD KEY `visitforegnkeyvid` (`fk_vid_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -136,6 +165,12 @@ ALTER TABLE `register`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
+-- AUTO_INCREMENT for table `vid`
+--
+ALTER TABLE `vid`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `visit`
 --
 ALTER TABLE `visit`
@@ -149,6 +184,7 @@ ALTER TABLE `visit`
 -- Constraints for table `visit`
 --
 ALTER TABLE `visit`
+  ADD CONSTRAINT `visitforegnkeyvid` FOREIGN KEY (`fk_vid_id`) REFERENCES `vid` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `visitforgenkeytodoctor` FOREIGN KEY (`fk_doctor_id`) REFERENCES `doctor` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `visitforgenkeytoregister` FOREIGN KEY (`fk_register_id`) REFERENCES `register` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
