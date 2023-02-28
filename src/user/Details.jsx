@@ -19,9 +19,7 @@ function Details() {
     console.log(id);
   }, []);
 
-
-
-///remembere to remove default 
+  ///remembere to remove default
   function edit(event) {
     event.preventDefault();
     const firstname = document.getElementById("firstname").value;
@@ -32,47 +30,34 @@ function Details() {
     const Doctor = document.getElementById("Doctor").value;
     const WARD = document.getElementById("WARD").value;
     const Appointmentsdue = document.getElementById("Appointmentsdue").value;
-    console.log(firstname)
-    console.log(lastname)
-    console.log(patientnumber)
-    console.log(ailment)
-    console.log(treatment)
-    console.log(Doctor)
-    console.log(WARD)
-    console.log(Appointmentsdue)
 
- 
     axios
-    .post(`http://localhost/php-react/register-login-php/edit.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}&ailment=${ailment}&treatment=${treatment}&Doctor=${Doctor}&WARD=${WARD}&Appointmentsdue=${Appointmentsdue}`)
+      .post(
+        `http://localhost/php-react/register-login-php/edit.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}&ailment=${ailment}&treatment=${treatment}&Doctor=${Doctor}&WARD=${WARD}&Appointmentsdue=${Appointmentsdue}`
+      )
 
-    .then((response) => setUserData(response.data))
-    .catch((error) => console.error(error));
-  setloading(true);
-  navigate(-1)
-
-
-
+      .then((response) => setUserData(response.data))
+      .catch((error) => console.error(error));
+    setloading(true);
+    navigate(-1);
   }
-
 
   function remove(event) {
     event.preventDefault();
     const firstname = document.getElementById("firstname").value;
     const lastname = document.getElementById("lastname").value;
     const patientnumber = document.getElementById("patientnumber").value;
- 
+
     axios
-    .post(`http://localhost/php-react/register-login-php/remove.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}`)
+      .post(
+        `http://localhost/php-react/register-login-php/remove.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}`
+      )
 
-    .then((response) => setUserData(response.data))
-    .catch((error) => console.error(error));
-  setloading(true);
-  navigate(-1)
-
-
-
+      .then((response) => setUserData(response.data))
+      .catch((error) => console.error(error));
+    setloading(true);
+    navigate(-1);
   }
-
 
   return (
     <div className="details-body">
@@ -155,7 +140,7 @@ function Details() {
                           ailment:
                         </label>
                         <textarea
-                        rows='5'
+                          rows="5"
                           id="ailment"
                           type="text"
                           key={data.id}
@@ -192,7 +177,7 @@ function Details() {
                           defaultValue={data.doctor}
                           name="Doctor"
                         />
-                              {/* add in drop down menu for doctor choice*/}
+                        {/* add in drop down menu for doctor choice*/}
                         <label key={data.id} htmlFor="WARD">
                           WARD:
                         </label>
@@ -227,8 +212,8 @@ function Details() {
                   : null}
                 <div className="admin-btns">
                   <button onClick={edit}>submit edits</button>
-                  </div>
-                  <div className="admin-btns">
+                </div>
+                <div className="admin-btns">
                   <button onClick={remove}>remove patient</button>
                 </div>
               </div>

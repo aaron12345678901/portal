@@ -29,7 +29,8 @@ if (!$conn) {
     $WARD = $_GET['WARD'];
     $Appointmentsdue = $_GET['Appointmentsdue'];
     $ailment = $_GET['ailment'];
-   
+    $password = $_GET['password'];
+    $hash = md5($password);
 
 
 // Retrieve data from the database based on the user's ID
@@ -39,7 +40,8 @@ SET
 first_name ='$firstname',
 last_name='$lastname',
 patientnum='$patientnumber',
-Appointments=' $Appointmentsdue'
+Appointments=' $Appointmentsdue',
+password = '$hash'
 WHERE id='$user_id'; ";
 $result = $conn->query($sql); 
 

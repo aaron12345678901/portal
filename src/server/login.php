@@ -19,9 +19,10 @@ if (!$conn) {
 // Get the email and password from the query parameters
 $email = $_GET['email'];
 $password = $_GET['password'];
+$hash = md5($password);
 
 // Check if the email and password match a user in the database
-$sql = "SELECT * FROM register WHERE email='$email' AND password='$password'";
+$sql = "SELECT * FROM register WHERE email='$email' AND password='$hash'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) > 0) {

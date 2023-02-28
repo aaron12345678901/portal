@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2023 at 10:14 PM
+-- Generation Time: Feb 28, 2023 at 11:15 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -63,11 +63,11 @@ CREATE TABLE `register` (
 --
 
 INSERT INTO `register` (`id`, `first_name`, `last_name`, `email`, `password`, `patientnum`, `Appointments`, `isadmin`) VALUES
-(1, 'bob', 'mcdade ', 'a@a', '1234', '9834452', '  23/12/34', 0),
-(2, 'aaron', 'mcavoy', 'b@b', '1', '985676', 'Check up :25/09/2022 14.00pm ', 0),
-(3, 'admin', 'admin', 'admin@admin', 'admin', 'admin', 'admin', 1),
-(4, 'tim', 'timmy', 't@t', '1', '123445', '12/34/56/', 0),
-(5, 'wer', 'wdd', 'e@e', '1', '12345', '23/45/67/', 0);
+(1, 'bob', 'mcdade ', 'bob@bob', 'c4ca4238a0b923820dcc509a6f75849b', '9834452', '  23/12/2023', 0),
+(2, 'aaron', 'mcavoy', 'aaron@aaron', 'c4ca4238a0b923820dcc509a6f75849b', '985676', '     25/09/2022', 0),
+(4, 'tim', 'timmy', 'tim@tim', 'c4ca4238a0b923820dcc509a6f75849b', '123445', '  12/3/2023', 0),
+(5, 'rebbeca', 'wdd', 'rebbeca@rebbeca', 'c4ca4238a0b923820dcc509a6f75849b', '12345', '  23/6/2023', 0),
+(18, 'admin', 'admin', 'admin@admin', '21232f297a57a5a743894a0e4a801fc3', '1', '1', 1);
 
 -- --------------------------------------------------------
 
@@ -112,10 +112,10 @@ CREATE TABLE `visit` (
 --
 
 INSERT INTO `visit` (`id`, `ailment`, `treatment`, `ward`, `date`, `fk_register_id`, `fk_doctor_id`, `fk_vid_id`) VALUES
-(1, '  broken arm', 'amputate ', '  12af', '2023-02-15', 1, 2, 1),
-(2, 'a rash of red, itchy spots that turn into fluid-filled blisters They then crust over to form scabs which eventually drop off.', 'soda cream', '13b', '2023-02-01', 2, 1, 1),
-(3, 'sore finger ', 'methadone ', '22h', '2023-02-25', 4, 1, 3),
-(4, 'Birney nipple ', 'soda cream ', '1a', '2023-02-20', 5, 2, 2);
+(1, '   pain in head ', 'mri scan ', '    12af', '2023-02-15', 1, 2, 1),
+(2, '     pain in spine', 'mri scan', '     13b', '2023-02-01', 2, 1, 1),
+(3, '  foot warts ', 'cleaned area and stitch up ', '  22h', '2023-02-25', 4, 1, 3),
+(4, '  broken leg ', 'bone reset ', '  1a', '2023-02-20', 5, 2, 2);
 
 --
 -- Indexes for dumped tables
@@ -162,7 +162,7 @@ ALTER TABLE `doctor`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `vid`
