@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import {  Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Logout from "../components/Logout";
 
 const Profile = () => {
+  
   const navigate = useNavigate();
+  // two states one to store user data and one to see if data is still loading
   const [userData, setUserData] = useState([]);
   const [loading, setloading] = useState(false);
-  console.log(userData);
-
+ 
+ // getting users data from server using the id that was retrieved
   let id = JSON.parse(window.localStorage.getItem("id"));
-  console.log("test", id);
+  
 
   useEffect(() => {
     axios
@@ -20,6 +22,8 @@ const Profile = () => {
       .catch((error) => console.error(error));
     setloading(true);
   }, []);
+
+  
 
   return (
     <div className="profile-container">
@@ -42,6 +46,7 @@ const Profile = () => {
         <div className="profile-img-pat-details">
           <div className="profile-img-container">
             <div className="profile-img"></div>
+            
           </div>
           <div className="profile-name-patnumber">
             {loading

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import Logout from "../components/Logout";
 
 const Home2 = () => {
-  const navigate = useNavigate();
+  // two states one to store user data and one to see if data is still loading
   const [userData, setUserData] = useState([]);
   const [loading, setloading] = useState(false);
-  console.log(userData);
 
+  // getting id from local storage and converting to a javascript object to be used
   let id = JSON.parse(window.localStorage.getItem("id"));
-  console.log("test", id);
 
+  // getting users data from server using the id that was retrieved
   useEffect(() => {
     axios
       .post(`http://localhost/php-react/register-login-php/get.php?id=${id}`)
@@ -72,8 +72,6 @@ const Home2 = () => {
           </div>
         </Link>
       </div>
-
-      <Outlet />
     </div>
   );
 };

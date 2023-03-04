@@ -1,22 +1,22 @@
 import React from 'react';
 import YouTube from 'react-youtube';
 
+// Import necessary dependencies
 
 function Treatmentvid ({vid}) {
 
-    const opts = {
-        
-        height: '390',
-        width: '640',
-        playerVars: {
-          // https://developers.google.com/youtube/player_parameters
-          autoplay: 1,
-        },
-      };
+  // Set the options for displaying the YouTube video
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      autoplay: 1,
+    },
+  };
 
-    return <YouTube videoId={vid} opts={opts}  />;
-
-
+  // Render the YouTube component with the specified video ID and options
+  return <YouTube videoId={vid} opts={opts} />;
 }
 
-export default Treatmentvid
+// Export the Treatmentvid component
+export default Treatmentvid;

@@ -1,6 +1,6 @@
 import React from "react";
 import Logout from "../components/Logout";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Map = () => {
   const navigate = useNavigate();

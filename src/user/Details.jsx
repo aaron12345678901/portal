@@ -1,7 +1,11 @@
+// Importing necessary modules
 import { useParams, useNavigate } from "react-router-dom";
 import Logout from "../components/Logout";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+
+//  FUNCTION to store the id which is specified in the url, const navigate to get access to the navigate function ,
+// usestate to create an array to store the users data, another use state set as false to keep track of user data being loaded
 
 function Details() {
   const { id } = useParams();
@@ -9,6 +13,7 @@ function Details() {
   const [userData, setUserData] = useState([]);
   const [loading, setloading] = useState(false);
 
+  // sending user id to php script to retrieve the rest of the users data
   useEffect(() => {
     axios
       .post(`http://localhost/php-react/register-login-php/get.php?id=${id}`)
@@ -16,10 +21,11 @@ function Details() {
       .then((response) => setUserData(response.data))
       .catch((error) => console.error(error));
     setloading(true);
-    console.log(id);
   }, []);
 
-  ///remembere to remove default
+  // function to edit data
+
+  // getting data from input fields
   function edit(event) {
     event.preventDefault();
     const firstname = document.getElementById("firstname").value;
@@ -31,6 +37,7 @@ function Details() {
     const WARD = document.getElementById("WARD").value;
     const Appointmentsdue = document.getElementById("Appointmentsdue").value;
 
+    // sending edits to php script/database
     axios
       .post(
         `http://localhost/php-react/register-login-php/edit.php?id=${id}&firstname=${firstname}&lastname=${lastname}&patientnumber=${patientnumber}&ailment=${ailment}&treatment=${treatment}&Doctor=${Doctor}&WARD=${WARD}&Appointmentsdue=${Appointmentsdue}`
@@ -42,6 +49,7 @@ function Details() {
     navigate(-1);
   }
 
+  // function to remove user from data base
   function remove(event) {
     event.preventDefault();
     const firstname = document.getElementById("firstname").value;
@@ -177,7 +185,7 @@ function Details() {
                           defaultValue={data.doctor}
                           name="Doctor"
                         />
-                        {/* add in drop down menu for doctor choice*/}
+
                         <label key={data.id} htmlFor="WARD">
                           WARD:
                         </label>

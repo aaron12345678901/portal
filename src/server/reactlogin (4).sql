@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2023 at 11:15 PM
+-- Generation Time: Mar 04, 2023 at 10:20 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -64,10 +64,11 @@ CREATE TABLE `register` (
 
 INSERT INTO `register` (`id`, `first_name`, `last_name`, `email`, `password`, `patientnum`, `Appointments`, `isadmin`) VALUES
 (1, 'bob', 'mcdade ', 'bob@bob', 'c4ca4238a0b923820dcc509a6f75849b', '9834452', '  23/12/2023', 0),
-(2, 'aaron', 'mcavoy', 'aaron@aaron', 'c4ca4238a0b923820dcc509a6f75849b', '985676', '     25/09/2022', 0),
-(4, 'tim', 'timmy', 'tim@tim', 'c4ca4238a0b923820dcc509a6f75849b', '123445', '  12/3/2023', 0),
-(5, 'rebbeca', 'wdd', 'rebbeca@rebbeca', 'c4ca4238a0b923820dcc509a6f75849b', '12345', '  23/6/2023', 0),
-(18, 'admin', 'admin', 'admin@admin', '21232f297a57a5a743894a0e4a801fc3', '1', '1', 1);
+(2, 'aaron', 'mcavoy', 'aaron@aaron', 'd41d8cd98f00b204e9800998ecf8427e', '985676gvgg', '              25/09/2022', 0),
+(4, 'tim', 'timmy', 'tim@tim', 'd41d8cd98f00b204e9800998ecf8427e', '123445', '    12/3/2023', 0),
+(18, 'admin', 'admin', 'admin@admin', '21232f297a57a5a743894a0e4a801fc3', '1', '1', 1),
+(19, 'h', 'h', 'h@h', 'c4ca4238a0b923820dcc509a6f75849b', NULL, NULL, 0),
+(20, '', '', '', 'd41d8cd98f00b204e9800998ecf8427e', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -113,9 +114,8 @@ CREATE TABLE `visit` (
 
 INSERT INTO `visit` (`id`, `ailment`, `treatment`, `ward`, `date`, `fk_register_id`, `fk_doctor_id`, `fk_vid_id`) VALUES
 (1, '   pain in head ', 'mri scan ', '    12af', '2023-02-15', 1, 2, 1),
-(2, '     pain in spine', 'mri scan', '     13b', '2023-02-01', 2, 1, 1),
-(3, '  foot warts ', 'cleaned area and stitch up ', '  22h', '2023-02-25', 4, 1, 3),
-(4, '  broken leg ', 'bone reset ', '  1a', '2023-02-20', 5, 2, 2);
+(2, '              pain in spine', 'mri scan', '              13b', '2023-02-01', 2, 1, 1),
+(3, '    foot warts ', 'cleaned area and stitch up ', '    22h', '2023-02-25', 4, 1, 3);
 
 --
 -- Indexes for dumped tables
@@ -162,7 +162,7 @@ ALTER TABLE `doctor`
 -- AUTO_INCREMENT for table `register`
 --
 ALTER TABLE `register`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `vid`
